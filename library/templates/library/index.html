@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+
+<h1>책 모음</h1>
+<hr>
+{% for book in books %}
+    <h2><a href="/library/{{ book.pk }}">책 제목:{{ book.title }}</a></h2>
+    <p>내용:{{book.content}}</p>
+    <p>생성일:{{ book.create_date }}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>
