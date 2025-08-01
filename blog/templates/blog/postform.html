@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block create-area %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ postform }}
+        <input type="submit">
+    </form>
+    <div class="card mb-4">
+
+{% endblock %}
+ {% block text_center %}
+                    <h1 class="fw-bolder">Create Page</h1>
+                    {% endblock %}
